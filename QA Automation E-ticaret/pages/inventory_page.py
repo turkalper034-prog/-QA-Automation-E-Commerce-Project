@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 class InventoryPage(BasePage):
     PRODUCTS_TİTLE = (By.XPATH,"//span[@class='title']")
     BİKE_LİGHT_BUTTON = (By.XPATH,"//button[@id='add-to-cart-sauce-labs-bike-light']")
+    BACKPACK_BUTTON = (By.XPATH, "//button[@id='add-to-cart-sauce-labs-backpack']")
     CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
     CART_LINK = (By.CLASS_NAME, "shopping_cart_link")
 
@@ -13,6 +14,8 @@ class InventoryPage(BasePage):
         return self.get_text(self.PRODUCTS_TİTLE)   
     def add_bike_light_button(self):
         self.click(self.BİKE_LİGHT_BUTTON)
+    def add_backpack_button(self):
+        self.click(self.BACKPACK_BUTTON)
     def get_cart_badge_count(self):
         return self.get_text(self.CART_BADGE)    
     def go_to_cart(self):

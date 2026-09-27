@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                bat 'echo Jenkins Pipeline çalışıyor'
+                bat '"C:/Users/turka/AppData/Local/Programs/Python/Python312/python.exe" -m pytest "QA Automation E-ticaret"'
             }
         }
     }
